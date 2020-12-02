@@ -38,8 +38,8 @@ const ModalAddFood: React.FC<IModalProps> = ({
 
   const handleSubmit = useCallback(
     async (data: ICreateFoodData) => {
-      const {description, image,name,price} = data;
-      handleAddFood({description, image, name, price});
+      handleAddFood(data);
+      setIsOpen();
     },
     [handleAddFood, setIsOpen],
   );
